@@ -1,5 +1,5 @@
 plugins {
-    id "com.android.application"
+    id "com.android.library"
     id "kotlin-android"
 }
 
@@ -12,14 +12,13 @@ allprojects {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 36
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 30
+        minSdkVersion 21
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     namespace "flutter.plugins.contactsservice.contactsservice"
     lintOptions {
@@ -28,8 +27,7 @@ android {
 
 }
 
-dependencies {
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'com.google.truth:truth:1.0'
-    implementation files('/Users/oxyfalcon/flutter/bin/cache/artifacts/engine/android-arm64-release/flutter.jar')
-}
+//dependencies {
+// Enter flutter.jar local file in flutter sdk
+//     implementation files('/Users/oxyfalcon/flutter/bin/cache/artifacts/engine/android-arm64-release/flutter.jar')
+//}
